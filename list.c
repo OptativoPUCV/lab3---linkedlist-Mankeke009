@@ -31,7 +31,8 @@ Node * createNode(void * data) {
 List * createList() {
   List *Lista = (List *)malloc(sizeof(List));
   Lista->current = NULL;
-  Lista-> size = 0;
+  Lista -> head = NULL;
+  Lista -> tail = NULL;
   return Lista;
 }
 //funcion para tener primer elemento de la lista
