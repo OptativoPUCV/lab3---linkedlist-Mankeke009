@@ -27,9 +27,13 @@ Node * createNode(void * data) {
     new->next = NULL;
     return new;
 }
-
+// Función para crear una lista vacía
 List * createList() {
-  List* Lista = (List*)malloc(sizeof(List));
+  List *Lista = (List *)malloc(sizeof(List));
+  assert(Lista != NULL);
+  Lista->head = NULL;
+  Lista->tail = NULL;
+  Lista->current = NULL;
   return Lista;
 }
 
