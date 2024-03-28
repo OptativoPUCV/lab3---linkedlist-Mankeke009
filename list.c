@@ -66,7 +66,13 @@ Node *current1 = list->current;
 }
 
 void * prevList(List * list) {
-    return NULL;
+Node *current1 = list->current;
+  if (current1 != NULL && current1->prev != NULL){
+      list->current =  current1->prev;
+    return list->current->data;
+  }
+
+  return NULL;
 }
 
 void pushFront(List * list, void * data) {
