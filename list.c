@@ -30,14 +30,19 @@ Node * createNode(void * data) {
 // Función para crear una lista vacía
 List * createList() {
   List *Lista = (List *)malloc(sizeof(List));
-  Lista->current = NULL;
+  Lista -> current = NULL;
   Lista -> head = NULL;
   Lista -> tail = NULL;
   return Lista;
 }
-//funcion para tener primer elemento de la lista
+//retornar el primer nodo (head) y actualiza el current para que apunte a ese nodo.
 void * firstList(List * list) {
-    return list -> current;
+    Node *current = list->head;
+    if (current != NULL){
+      list->current = current;
+      return current->data;
+    }
+    return NULL;
 }
 
 void * nextList(List * list) {
