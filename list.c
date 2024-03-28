@@ -37,15 +37,23 @@ List * createList() {
 }
 //retornar el primer nodo (head) y actualiza el current para que apunte a ese nodo.
 void * firstList(List * list) {
-    Node *current = list->head;
-    if (current != NULL){
-      list->current = current;
-      return current->data;
+    Node *current1 = list->head;
+    if (current1 != NULL){
+      list->current = current1;
+      return current1->data;
     }
     return NULL;
 }
 
 void * nextList(List * list) {
+  Node *current1 = list->head;
+  if (current1 != NULL){
+    if (list->current->next != NULL){
+      list->current = list->current->next;
+      return list->current->data;
+    }
+    
+  }
     return NULL;
 }
 
