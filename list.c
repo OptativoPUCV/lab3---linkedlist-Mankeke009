@@ -47,13 +47,12 @@ void * firstList(List * list) {
 //retorna el dato siguiente a la lista.
 void * nextList(List * list) {
   Node *current1 = list->current;
-  if (current1 != NULL && current1->next != NULL){
-          current1 = list->current->next;
-          return current1->data;
+      if (current1 != NULL && current1->next != NULL){
+          list->current = current1->next;
+          return list->current->data;
       }
-
-  return NULL;
-}
+      return NULL;
+  }
 
 void * lastList(List * list) {
     return NULL;
