@@ -49,10 +49,11 @@ void * nextList(List * list) {
   Node *current1 = list->head;
   if (current1 != NULL){
     if (list->current->next != NULL){
-      list->current->next = current1;
+      list->current = list->current->next;
       return list->current->data;
+      
     }
-    return NULL; 
+    
   }
   return NULL;
 }
