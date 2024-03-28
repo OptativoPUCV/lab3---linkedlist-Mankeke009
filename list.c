@@ -31,7 +31,6 @@ Node * createNode(void * data) {
 List * createList() {
   List* Lista = (List*)malloc(sizeof(List));
   Lista->current = 0;
-  Lista->size = 0;
   return Lista;
 }
 
