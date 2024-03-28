@@ -37,7 +37,7 @@ List * createList() {
 }
 //funcion para tener primer elemento de la lista
 void * firstList(List * list) {
-    return list -> tail;
+    return list -> current;
 }
 
 void * nextList(List * list) {
