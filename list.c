@@ -56,12 +56,6 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
-Node *current1 = list->current;
-  if (current1 != NULL && current1->prev != NULL){
-      list->current =  current1->prev;
-    return list->current->data;
-  }
-
   return NULL;
 }
 
