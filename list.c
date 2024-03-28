@@ -29,9 +29,9 @@ Node * createNode(void * data) {
 }
 List * createList() {
   List *Lista = (List *)malloc(sizeof(List));
-  Lista -> current = NULL;
   Lista -> head = NULL;
   Lista -> tail = NULL;
+  Lista -> current = NULL;
   return Lista;
 }
 void * firstList(List * list) {
