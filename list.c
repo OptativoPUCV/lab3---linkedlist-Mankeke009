@@ -54,6 +54,7 @@ void * nextList(List * list) {
     }
     return NULL; 
   }
+  return NULL;
 }
 
 void * lastList(List * list) {
