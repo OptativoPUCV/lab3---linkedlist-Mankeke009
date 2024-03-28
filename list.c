@@ -27,7 +27,6 @@ Node * createNode(void * data) {
     new->next = NULL;
     return new;
 }
-// Función para crear una lista vacía
 List * createList() {
   List *Lista = (List *)malloc(sizeof(List));
   Lista -> current = NULL;
@@ -49,7 +48,6 @@ void * nextList(List * list) {
       list->current =  current1->next;
     return list->current->data;
   }
-
   return NULL;
 }
 
@@ -68,7 +66,6 @@ Node *current1 = list->current;
       list->current =  current1->prev;
     return list->current->data;
   }
-
   return NULL;
 }
 
@@ -83,7 +80,6 @@ void pushFront(List * list, void * data) {
     list->head->prev = nuevito;
     list->head = nuevito;
   }
-  
 }
 
 
