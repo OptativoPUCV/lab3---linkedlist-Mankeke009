@@ -92,21 +92,22 @@ Programe la función void pushCurrent(List * list, void* data), la cual agrega u
 void pushCurrent(List * list, void * data) {
   Node *nuevito = createNode(data);
   if (list->current != NULL){
-    if (list->current->next == NULL){
-        list->current->next = nuevito;
-        nuevito->prev = list->current;
-        list->tail = nuevito;
-
-      }
-      else{
-        nuevito->next = list->current->next;
-        list->current->next->prev = nuevito;
-        list->current->next = nuevito;
-        nuevito->prev = list->current;
-
-      }
+    if(list->current->next != NULL){
+      list->current->next->prev = nuevito;
+      nuevito->next = list->current->next;
+      list->current->next = nuevito;
+      nuevito->prev = list->current;
+    }
+    else{
+      list->current->next = nuevito;
+      nuevito->prev = list->current;
+      list->tail = nuevito;
+      
+    }
   }
 }
+    
+
 
 
 void * popFront(List * list) {
